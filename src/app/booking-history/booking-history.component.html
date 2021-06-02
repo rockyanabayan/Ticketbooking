@@ -1,0 +1,14 @@
+<p>booking-history works!</p>
+
+<ol>
+    <li *ngFor="let bookFlight of bookFlights;index as i;">
+      
+      Name : <span>{{bookFlight.name}}</span>,  <br><br>
+      Email : <span>{{bookFlight.email}}</span>,  <br><br>
+      Booked AirLine name : <span>{{bookFlight.airlineName}}</span>,  <br><br>
+      Price: <span>{{bookFlight.price}}</span>,  <br><br>
+      onwardJourney :<span>{{bookFlight.onwardJourney |date:'d/M/yyyy'}}</span> <br><br>
+      ReturnJourney :<span>{{bookFlight.returnJourney |date:'d/M/yyyy'}}</span> <br><br>
+      
+    </li>
+</ol>

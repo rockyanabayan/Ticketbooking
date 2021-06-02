@@ -1,0 +1,45 @@
+
+
+<h1>Book Flight</h1>
+
+<input type="radio" value="oneway" [(ngModel)]='bookFlight.oneWay'>oneway
+<input type="radio" value="roundtrip" [(ngModel)]='bookFlight.roundTrip'>Round Trip <br> <br>
+
+<label for="airlineName">Airline Name</label>
+<select id="airlineName" name="airlineName" [(ngModel)]='bookFlight.airlineName'><br> <br>
+  <option value="indigo">indigo</option>
+  <option value="airAsia">AirAsia</option>
+</select> <br> <br>
+Name<input type="text" [(ngModel)]='bookFlight.name'> <br> <br>
+Email<input type="email" [(ngModel)]='bookFlight.email'> <br> <br>
+
+<label for="fromLocation" >From</label>
+<select id="fromLocation" name="fromLocation" [(ngModel)]='bookFlight.from'>
+  
+  <option value="Banglore">Banglore</option>
+  <option value="Hyderabad">Hyderabad</option>
+  
+</select>
+<label for="ToLocation">To</label>
+<select id="ToLocation" name="ToLocation" [(ngModel)]='bookFlight.to'><br> <br>
+  <option value="Banglore">Banglore</option>
+  <option value="Hyderabad">Hyderabad</option>
+</select> <br> <br>
+<label>Onward Journey</label><input type="date" [(ngModel)]='bookFlight.onwardJourney'><br> <br>
+<label>Return Journey</label><input type="date" [(ngModel)]='bookFlight.returnJourney'><br> <br>
+
+<label for="mealf">Meal Preferene</label>
+<select id="mealf" name="mealf" [(ngModel)]='bookFlight.mealPreference'>
+  <option value="veg">Veg</option>
+  <option value="nonveg">Non-Veg</option>
+  <option value="none">None</option>
+</select>
+
+
+    Discount Code      <input type="text" [(ngModel)]='bookFlight.discountCode'>
+<br>
+Select Seat(Onward Journey)    <input type="text" [(ngModel)]='bookFlight.onwardSeat'> 
+<br>
+Select Seat(Return Journey)    <input type="text" [(ngModel)]='bookFlight.returnSeat'> 
+<br>
+  <button (click)='bookTicket()'>Check out</button>

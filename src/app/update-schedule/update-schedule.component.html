@@ -1,0 +1,50 @@
+
+<h2> update scheduled details</h2>
+
+<label for="airlineName">Airline Name</label>
+<select id="airlineName" name="airlineName" [(ngModel)]='airline.airlineName'><br> <br>
+  <option value="indigo">indigo</option>
+  <option value="airAsia">AirAsia</option>
+</select> <br> <br>
+Flight Number    <input type="text" id="flightNumber" [(ngModel)]='airline.flightNumber'> 
+<br>
+
+<label for="fromLocation" >From Place </label>
+<select id="fromLocation" name="fromLocation" [(ngModel)]='airline.fromPlace'>
+  
+  <option value="saab">Banglore</option>
+  <option value="fiat">Hyderabad</option>
+  
+</select>
+
+<label for="ToLocation">To Place</label>
+<select id="ToLocation" name="ToLocation" [(ngModel)]='airline.toPlace'><br> <br>
+  <option value="saab">Banglore</option>
+  <option value="fiat">Hyderabad</option>
+</select> <br> <br>
+Start DateTime    <input type="date" [(ngModel)]='airline.startDateTime'> 
+
+<br>
+End DateTime    <input type="date" [(ngModel)]='airline.endDateTime'> 
+
+<br>
+Schedule Days    <input type="text" [(ngModel)]='airline.scheduledDays'> 
+<br>
+
+<label for="instrumentUsed">Instrument Used</label>
+<select id="instrumentUsed" name="instrument" [(ngModel)]='airline.instrumentUsed'><br> <br>
+  <option value="A320">A320</option>
+  <option value="A320 neo">A320 neo</option>
+</select> <br> <br>
+No of Rows    <input type="number" [(ngModel)]='airline.noOfRows'> 
+<br>
+<label for="meal">Meal Preference/label>
+<select id="meal" name="meal" [(ngModel)]='airline.meal'><br> <br>
+  <option value="veg">Veg</option>
+  <option value="nonveg">Non-Veg</option>
+  <option value="none">None</option>
+</select> <br> <br>
+No of BusinessSeats   <input type="number" [(ngModel)]='airline.numberOfBusinessSeats'> <br> <br>
+No of Non-BusinessSeats   <input type="number" [(ngModel)]='airline.numberOfNonBusinessSeats'> <br> <br>
+Price   <input type="number" [(ngModel)]='airline.ticketCost'> <br> <br>
+  <button (click)='updateAirline()'>Update Schedule</button>

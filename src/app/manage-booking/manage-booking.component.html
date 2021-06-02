@@ -1,0 +1,22 @@
+<table>
+    <tr>
+       <th>Airline Name</th>
+       <th>price</th>
+       <th>OnwardJourneyDate</th>
+       <th>Action</th>
+     </tr>
+     <tr>
+       <li *ngFor="let bookFlight of bookFlights;index as i;">
+           
+       <td>{{bookFlight.airlineName}}</td>   
+       <td>Rs,{{bookFlight.price}}</td>
+       <td>{{bookFlight.onwardJourney |date:'d/M/yyyy'}}</td>
+       <td> <button click="">View</button></td>
+       <td> <button click="">Download</button></td>
+       <td> <button><a routerLink="/cancel">cancel</a></button></td>
+   
+       </li>
+     </tr>
+   </table>
+   
+   <router-outlet></router-outlet>

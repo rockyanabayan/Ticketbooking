@@ -1,0 +1,24 @@
+
+<label for="selectair">Select Airline</label>
+<select id="selectairline" name="selectair">
+  <option value="indigo">Indigo</option>
+  <option value="airasia">Air Asia</option>
+</select><br><br>
+Flight number<input type="text" id='flightNumberAirline'><br><br>
+Instrument Used<input type="text"  id='instrumentUsed'><br><br>
+
+<button click="searchAirline()">Search</button><br><br>
+
+<a routerLink="/scheduleDetails" >ScheduleDetails</a>
+
+<router-outlet></router-outlet>
+
+
+<ol>
+  <li *ngFor="let a of airlines;index as i;">
+    
+    <span>{{a.airlineName}}</span>
+   
+  </li>
+</ol>
+
